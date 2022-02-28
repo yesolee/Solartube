@@ -1,0 +1,222 @@
+:root {
+  --red-color: #fb1212;
+  --white-color: #fafaf9;
+  --blue-color: #1247f4;
+  --grey-color: #7e7b7b;
+  --lightgrey-color: #e7e7e7;
+  --black-color: #0e0e0e;
+
+  --padding: 2px 4px;
+  --large-padding: 8px 2px;
+  --margin: 8px 12px;
+
+  --font-large: 24px;
+  --font-medium: 20px;
+  --font-small: 16px;
+}
+
+* {
+  padding: 0;
+  margine: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Single Day", cursive;
+}
+
+header {
+  font-size: var(--font-large);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black-color);
+  align-items: flex-start;
+}
+.logo {
+  display: flex;
+  color: var(--white-color);
+}
+
+.logo li {
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  padding: var(--padding);
+  color: var(--white-color);
+}
+
+.logo i {
+  color: var(--red-color);
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding: var(--padding);
+}
+
+.menu i {
+  color: var(--white-color);
+}
+
+.main_video {
+  width: 100%;
+  height: 400px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex: 1 1 50%;
+}
+.hashtag {
+  color: var(--blue-color);
+  font-size: var(--font-small);
+  padding: var(--padding);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title li {
+  padding: var(--padding);
+}
+.content {
+  font-size: var(--font-medium);
+}
+
+.timeline {
+  color: var(--grey-color);
+  padding: var(--padding);
+}
+
+.like {
+  display: flex;
+  justify-content: space-around;
+  color: var(--grey-color);
+}
+
+.up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.up i {
+  color: var(--blue-color);
+}
+.down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name_tag {
+  display: flex;
+  border: solid var(--lightgrey-color);
+  border-left: none;
+  border-right: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.channel_info {
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin);
+}
+.channel_info .channel_subscribers {
+  color: var(--grey-color);
+}
+
+.name_tag_info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.subscribe_btn a {
+  color: var(--red-color);
+  font-size: var(--font-medium);
+  text-decoration: none;
+}
+
+.recomment_info {
+  color: var(--grey-color);
+}
+.another_v1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.another_v2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.another_v3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.another_img {
+  flex: 1 1 35%;
+}
+
+.another_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.another_info {
+  flex: 1 1 60%;
+}
+
+.another_btn {
+  flex: 1 1 5%;
+  border: none;
+}
+
+.anonther_info_sub2 {
+  color: var(--grey-color);
+}
+
+.recommend {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+}
+
+.wide {
+  display: flex;
+}
