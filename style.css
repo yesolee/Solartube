@@ -219,4 +219,11 @@ header {
 
 .wide {
   display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 330px) {
+  .wide {
+    flex-direction: row;
+  }
 }
