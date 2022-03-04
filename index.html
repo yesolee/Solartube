@@ -9,92 +9,134 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fc8a20ddf1.js" crossorigin="anonymous"></script>
-    <title>Soltube</title>
+    <script src="main.js" defer></script>
+    <title>Solartube</title>
 </head>
 <body>
     <header>
-        <ul class="logo">
-            <li><i class="fab fa-youtube"></i></li>
-            <li>Soltube</li>
-        </ul>
-        <ul class="menu">
-            <li><i class="fas fa-search"></i></li>
-            <li><i class="fas fa-ellipsis-v"></i></li>
-        </ul>
+        <!-- ul>li*2를 div>i, span으로 수정 : 패딩? 공간이 줄었음-->
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <!-- li가 아닌 span을 씀으로써 class를 지정해줌-->
+            <span class="logo_title">Solartube</span>
+        </div>
+        <!-- ul>li*2도 가능, div>button가능수정 : 패딩? 공간이 줄었음-->
+        <div class="menu">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
     </header>
     <section class="video">
-        <video class="main_video" controls src="video/cat.mp4" type="video/mp4"></video>
+        <!--video는 클래스 필요없음-->
+        <video controls src="video/cat.mp4"></video>
     </section>
     <div class="wide">
+        <!-- video info -->
         <section class="info">
-            <div class="hashtag">#cat #픽사베이 #무료영상</div>
-            <ul class="title">
-                <li class="content">우리집 댕댕이를 보여주고 싶었는데 왜때문인지 동영상 업로드가 안되서 무료 사이트인 픽사베이에서 임시로 다운받았어요 ㅣ픽사베이 무료동영상 중 고양이: 그런데 너무 귀여웡...</li>
-                <li><i class="fas fa-caret-down"></i></li>
-            </ul>
-            <div class="timeline">1M views 1 month ago</div>
-            <div class="like">
-                <ul class="up">
-                    <li><i class="fas fa-thumbs-up"></i></li>
-                    <li>1K</li>
+            <!-- 해쉬태그, 제목, 뷰를 하나의 박스(div)로 묶어줌-->
+            <!-- Metadata -->
+            <div class="metadata">
+            <!-- 해쉬태그는 글자가 아니고 리스트로 나타냄-->
+                <ul class="hashtag">
+                    <li>#cat</li>
+                    <li>#픽사베이</li>
+                    <li>#무료영상</li>
                 </ul>
-                <ul class="down">
-                    <li><i class="fas fa-thumbs-down"></i></li>
-                    <li>0</li>
-                </ul>
-                <ul class="share">
-                    <li><i class="fas fa-share"></i></li>
-                    <li>Share</li>
-                </ul>
-                <ul class="plus">
-                    <li><i class="fas fa-plus"></i></li>
-                    <li>Save</li>
-                </ul>
-                <ul class="flag">
-                    <li><i class="fab fa-font-awesome-flag"></i></li>
-                    <li>Report</li>
-                </ul>
+                <!-- ul>li*3에서 div>span+button>i로 수정-->
+                <div class="title">
+                    <span class="content clamp">우리집 댕댕이를 보여주고 싶었는데 왜때문인지 동영상 업로드가 안되서 무료 사이트인 픽사베이에서 임시로 다운받았어요 ㅣ픽사베이 무료동영상 중 고양이: 그런데 너무 귀여웡...</span>
+                    <!-- button에 클래스 이름 부여-->
+                    <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <!-- span을 꼭 div로 감쌀 필요 없음-->
+                <span class="timeline">
+                    1M views 1 month ago
+                </span>
             </div>
+            <!-- div>ul>li>i에서 ul>li>button>i,span, li class 이름 X-->
+            <!-- Actions -->
+            <ul class="like">
+                <li>
+                    <button>
+                        <i class="active fas fa-thumbs-up"></i>
+                        <span>1K</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fas fa-thumbs-down"></i>
+                        <span>0</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fas fa-plus"></i>
+                        <span>Save</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fab fa-font-awesome-flag"></i>
+                        <span>Report</span>
+                    </button>
+                </li>
+            </ul>
+            <!-- Channel Description -->
             <div class="name_tag">
                 <div class="name_tag_info">
+                    <!-- div 사용 안하고 바로썼으나, 나중에 확인해보기 -->
                     <div class="profile"><img src="https://images.pexels.com/photos/3643714/pexels-photo-3643714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></div>
-                    <ul class="channel_info">
-                        <li class="channel_name">코딩스타트 by Solarbeamp</li>
-                        <li class="channel_subscribers">1M subscribers</li>
-                    </ul>
+                    <!-- ul>li 에서 div>span*2로 수정 -->
+                    <div class="channel_info">
+                        <span class="channel_name">코딩스타트 by Solarbeamp</span>
+                        <span class="channel_subscribers">1M subscribers</span>
+                    </div>
                 </div>
-                <div class="subscribe_btn"><a href="">Subscribe</a></div>
+                <!-- div>a에서 그냥 button으로 수정, subscribe는 css에서 대문자로 바꿀예정 -->
+                <button class="subscribe_btn">Subscribe</button>
             </div>
         </section>
         <section class="recommend">
-            <div class="recomment_info">Up next</div>
-            <div class="another_v1">
-                <div class="another_img"><img src="image/thumbnail_1.jpg"></div>
-                <ul class="another_info">
-                    <li class="anonther_info_main">귀여운 고양이의 또다른 사진1</li>
-                    <li class="anonther_info_sub1">pexels.com</li>
-                    <li class="anonther_info_sub2">82K views</li>
-                </ul>
-                <div class="another_btn"><i class="fas fa-ellipsis-v"></i></div>
-            </div>
-            <div class="another_v2">
-                <div class="another_img"><img src="image/thumbnail_2.jpg"></div>
-                <ul class="another_info">
-                    <li class="anonther_info_main">귀여운 고양이의 또다른 사진2</li>
-                    <li class="anonther_info_sub">pexels.com</li>
-                    <li class="anonther_info_sub2">82K views</li>
-                </ul>
-                <div class="another_btn"><i class="fas fa-ellipsis-v"></i></div>
-            </div>
-            <div class="another_v3">
-                <div class="another_img"><img src="image/thumbnail_3.jpg"></div>
-                <ul class="another_info">
-                    <li class="anonther_info_main">귀여운 고양이의 또다른 사진3</li>
-                    <li class="anonther_info_sub">pexels.com</li>
-                    <li class="anonther_info_sub2">82K views</li>
-                </ul>
-                <div class="another_btn"><i class="fas fa-ellipsis-v"></i></div>
-            </div>
+            <!-- div에서 span으로 변경 -->
+            <span class="recommend_info">Up next</span>
+            <!-- 같은형태반복 : list 임으로 div>div>div+ul에서 ul>li로 변경 -->
+            <ul>
+                <li class="another">
+                    <!-- div+ul+div에서 div(img)+div+button으로 변경 -->
+                    <div class="another_img"><img src="image/thumbnail_1.jpg"></div>
+                    <!-- ul>li*3에서 div>span*3로 수정--> 
+                    <div class="another_info">
+                        <span class="anonther_info_main">귀여운 고양이의 또다른 사진1</span>
+                        <span class="anonther_info_sub1">pexels.com</span>
+                        <span class="anonther_info_sub2">82K views</span>
+                    </div>
+                    <button class="another_btn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="another">
+                    <div class="another_img"><img src="image/thumbnail_2.jpg"></div>
+                    <div class="another_info">
+                        <span class="anonther_info_main">귀여운 고양이의 또다른 사진2</span>
+                        <span class="anonther_info_sub">pexels.com</span>
+                        <span class="anonther_info_sub2">82K views</span>
+                    </div>
+                    <button class="another_btn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="another">
+                    <div class="another_img"><img src="image/thumbnail_3.jpg"></div>
+                    <div class="another_info">
+                        <span class="anonther_info_main">귀여운 고양이의 또다른 사진3</span>
+                        <span class="anonther_info_sub">pexels.com</span>
+                        <span class="anonther_info_sub2">82K views</span>
+                    </div>
+                    <button class="another_btn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
         </section>
     </div>
 </body>
