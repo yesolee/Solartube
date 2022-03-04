@@ -1,220 +1,85 @@
 :root {
-  --red-color: #fb1212;
-  --white-color: #fafaf9;
-  --blue-color: #1247f4;
-  --grey-color: #7e7b7b;
-  --lightgrey-color: #e7e7e7;
-  --black-color: #0e0e0e;
+  /* Color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
 
-  --padding: 2px 4px;
+  /* size */
+  --padding: 12px;
+  --avatar-size: 36px;
   --large-padding: 8px 2px;
-  --margin: 8px 12px;
+  --margin: 12px;
 
-  --font-large: 24px;
-  --font-medium: 20px;
-  --font-small: 16px;
+  /* Font size */
+  --font-max: 18px;
+  --font-large: 16px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
 }
 
 * {
   padding: 0;
   margine: 0;
-}
-
-li {
-  list-style: none;
+  /* 패딩,마진 포함된 사이즈*/
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Single Day", cursive;
 }
 
+button,
+button :focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
 header {
-  font-size: var(--font-large);
   display: flex;
   justify-content: space-between;
   background-color: var(--black-color);
-  align-items: flex-start;
-}
-.logo {
-  display: flex;
+  padding: var(--padding);
   color: var(--white-color);
 }
 
-.logo li {
+header .logo {
   font-family: "ZCOOL QingKe HuangYou", cursive;
-  padding: var(--padding);
-  color: var(--white-color);
+  font-size: var(--font-max);
 }
 
-.logo i {
+header .logo i {
   color: var(--red-color);
 }
 
-.menu {
-  display: flex;
+header .menu .fa-search {
+  margin-right: var(--margin);
 }
 
-.menu li {
-  padding: var(--padding);
+/* Video player */
+
+.video {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
 }
 
-.menu i {
-  color: var(--white-color);
-}
-
-.main_video {
-  width: 100%;
-  height: 400px;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  flex: 1 1 50%;
-}
-.hashtag {
-  color: var(--blue-color);
-  font-size: var(--font-small);
-  padding: var(--padding);
-}
-
-.title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.title li {
-  padding: var(--padding);
-}
-.content {
-  font-size: var(--font-medium);
-}
-
-.timeline {
-  color: var(--grey-color);
-  padding: var(--padding);
-}
-
-.like {
-  display: flex;
-  justify-content: space-around;
-  color: var(--grey-color);
-}
-
-.up {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.up i {
-  color: var(--blue-color);
-}
-.down {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.share {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.plus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flag {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.name_tag {
-  display: flex;
-  border: solid var(--lightgrey-color);
-  border-left: none;
-  border-right: none;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.profile img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.channel_info {
-  display: flex;
-  flex-direction: column;
-  margin: var(--margin);
-}
-.channel_info .channel_subscribers {
-  color: var(--grey-color);
-}
-
-.name_tag_info {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.subscribe_btn a {
-  color: var(--red-color);
-  font-size: var(--font-medium);
-  text-decoration: none;
-}
-
-.recomment_info {
-  color: var(--grey-color);
-}
-.another_v1 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.another_v2 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.another_v3 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.another_img {
-  flex: 1 1 35%;
-}
-
-.another_img img {
+.video video {
   width: 100%;
   height: 100%;
-}
-
-.another_info {
-  flex: 1 1 60%;
-}
-
-.another_btn {
-  flex: 1 1 5%;
-  border: none;
-}
-
-.anonther_info_sub2 {
-  color: var(--grey-color);
-}
-
-.recommend {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 50%;
+  max-width: 1000px;
+  max-height: 400px;
 }
 
 .wide {
@@ -222,8 +87,166 @@ header {
   flex-direction: column;
 }
 
-@media screen and (min-width: 330px) {
+/* info */
+
+.wide > .info {
+  padding: var(--padding);
+  flex: 1 1 50%;
+}
+
+.info .metadata .hashtag {
+  display: flex;
+  color: var(--blue-color);
+  font-size: var(--font-small);
+  margin: 0px;
+}
+
+.info .metadata .hashtag li {
+  margin-right: var(--margin);
+}
+.info .metadata .title {
+  display: flex;
+}
+
+.info .metadata .title .content {
+  font-size: var(--font-medium);
+  margin-right: var(--margin);
+}
+
+.info .metadata .title .content.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .metadata .title .moreBtn {
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .title .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+
+.info .metadata .timeline {
+  color: var(--grey-dark-color);
+  font-size: var(--font-small);
+}
+
+/* Action Buttons */
+.info .like {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--margin) 0;
+}
+
+.info .like button {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .like button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--margin) / 2);
+  font-size: var(--font-large);
+}
+
+.info .like button i.active {
+  color: var(--blue-color);
+}
+
+.info .name_tag {
+  display: flex;
+  border: 1px solid var(--grey-light-color);
+  border-left: none;
+  border-right: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info .name_tag .name_tag_info {
+  display: flex;
+  align-items: center;
+}
+
+.info .name_tag .name_tag_info .profile img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.info .name_tag .channel_info {
+  display: flex;
+  flex-direction: column;
+}
+
+..info name_tag .channel_info .channel_name {
+  font-size: var(--font-medium);
+}
+
+.info .name_tag .channel_info .channel_subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .name_tag .subscribe_btn {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+  text-decoration: none;
+  border: none;
+}
+
+/* up Next*/
+
+.wide .recommend {
+  padding: var(--padding);
+  flex: 1 1 50%;
+}
+
+/*클래스 이름이 똑같은게 여러개일 경우 바로 밑에꺼만 인식 할떄'>'사용 */
+.recommend > .recommend_info {
+  color: var(--grey-dark-color);
+  font-size: var(--font-medium);
+}
+
+.recommend .another {
+  display: flex;
+  margin-top: var(--margin);
+}
+
+.recommend .another_img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.recommend .another_img img {
+  width: 100%;
+  height: auto;
+}
+
+.recommend .another_info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommend .another_btn {
+  height: 100%;
+  flex: 1 1 5%;
+}
+
+.anonther_info_sub2 {
+  color: var(--grey-dark-color);
+}
+
+@media screen and (min-width: 768px) {
   .wide {
     flex-direction: row;
+    margin: var(--margin) 0;
   }
 }
